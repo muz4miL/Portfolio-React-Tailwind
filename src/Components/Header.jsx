@@ -20,7 +20,7 @@ const Header = () => {
         </h2>
       </div>
       <span className="text-scooter-500 dark:text-scooter-400 mt-4 block text-base font-semibold sm:text-lg">
-        Monday, Aug 11
+        {new Date().toLocaleDateString()}
       </span>
     </header>
   );
