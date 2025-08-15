@@ -1,98 +1,27 @@
 @import 'tailwindcss';
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 @theme {
-  --color-scooter-50: #effcfb;
-  --color-scooter-100: #d5f8f8;
-  --color-scooter-200: #b1eff0;
-  --color-scooter-300: #7be1e5;
-  --color-scooter-400: #3dcbd3;
-  --color-scooter-500: #25c0cb;
-  --color-scooter-600: #1f8d9b;
-  --color-scooter-700: #1f727f;
-  --color-scooter-800: #225d68;
-  --color-scooter-900: #204e59;
-  --color-scooter-950: #10333c;
-}
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-500: #6366f1; /* Indigo (accent) */
+  --color-primary-700: #4338ca;
 
-.btn-primary {
-  @apply bg-scooter-500 hover:bg-scooter-600 focus:ring-scooter-400 flex items-center justify-center rounded-full px-8 py-3 font-semibold text-white shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 focus:ring-4 focus:outline-none active:scale-95;
-}
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
 
-.btn-filter {
-  @apply border-scooter-200 bg-scooter-50 text-scooter-700 hover:bg-scooter-100 focus:ring-scooter-300 rounded-full border px-8 py-3 font-semibold shadow transition-transform duration-300 ease-in-out hover:scale-105 focus:ring-4 focus:outline-none active:scale-95 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-700;
-}
-
-.btn-clear {
-  @apply rounded px-4 py-2 font-semibold transition-colors hover:text-red-500 focus:ring-2 focus:ring-red-400 focus:outline-none active:text-red-600;
-}
-
-.card {
-  @apply flex items-center justify-between rounded-2xl bg-white p-6 shadow-lg transition-transform duration-300 hover:shadow-2xl dark:bg-gray-800;
-}
-
-.checkbox-box {
-  @apply border-scooter-300 peer-checked:border-scooter-900 peer-checked:bg-scooter-100 peer-checked:text-scooter-900 inline-flex h-6 w-6 items-center justify-center rounded-md border transition-colors dark:peer-checked:text-gray-400;
-}
-
-.checkbox-box-transparent {
-  @apply border-scooter-300 peer-checked:border-scooter-900 peer-checked:text-scooter-900 inline-flex h-6 w-6 items-center justify-center rounded-md border transition-colors peer-checked:bg-transparent;
-}
-
-.input-primary {
-  @apply border-scooter-300 text-scooter-900 focus:ring-scooter-400 flex-1 rounded-full border px-6 py-4 text-lg font-medium shadow-sm transition focus:ring-4 focus:outline-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400;
-}
-
-.header-gradient {
-  @apply border-scooter-900/10 from-scooter-50 to-scooter-100 flex flex-col items-start border-b bg-gradient-to-r dark:border-gray-700 dark:from-gray-800 dark:to-gray-900;
-}
-
-.section-border {
-  @apply border-scooter-900/10 border-b;
-}
-
-.section-bg-light {
-  @apply bg-scooter-50 dark:bg-gray-900;
-}
-
-.section-bg-white {
-  @apply bg-white dark:border-gray-700 dark:bg-gray-800 dark:shadow-none;
-}
-
-.text-primary {
-  @apply text-scooter-900 font-medium transition-colors dark:peer-checked:text-gray-400;
-}
-
-.text-muted {
-  @apply text-scooter-400 dark:text-gray-500;
-}
-
-.text-heading {
-  @apply text-5xl font-extrabold tracking-tight sm:text-6xl;
-}
-
-.flex-center {
-  @apply flex items-center justify-center;
-}
-
-.flex-start {
-  @apply flex items-center gap-6;
-}
-
-.flex-col-start {
-  @apply flex flex-col items-start;
-}
-
-.todo-list {
-  @apply max-h-[50vh] space-y-6 overflow-x-hidden overflow-y-auto pr-2 transition-colors duration-300;
-}
-
-/* Minimal scrollbar for premium feel */
-.scrollbar-thin {
-  scrollbar-width: thin;
-}
-.scrollbar-thumb-scooter-300 {
-  scrollbar-color: var(--color-scooter-300) transparent;
-}
-.scrollbar-track-transparent {
-  background-color: transparent;
+  --color-success: #22c55e;
+  --color-warning: #facc15;
+  --color-danger: #ef4444;
 }
