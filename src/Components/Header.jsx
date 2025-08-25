@@ -4,14 +4,7 @@ import Logo from '../utils/Logo.jsx';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = React.useState(false);
-  const navLinks = [
-    'Product',
-    'Resources',
-    'Pricing',
-    'Customers',
-    'Now',
-    'Contact',
-  ];
+  const navLinks = ['Product', 'Pricing', 'Contact'];
   return (
     <section>
       <header className="flex items-center border-b border-gray-800 bg-black px-4 py-4 shadow-lg md:px-8">
