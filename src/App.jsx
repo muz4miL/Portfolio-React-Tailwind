@@ -1,13 +1,9 @@
-import Header from './Components/Header';
-import Hero from './Components/Hero';
-import Dashboard from './Components/Dashboard';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
     <div>
-      <Header />
-      <Hero />
-      <Dashboard />
+      <Navbar />
     </div>
   );
 }
