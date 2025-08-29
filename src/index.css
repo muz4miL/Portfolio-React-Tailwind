@@ -3,3 +3,17 @@
 body {
   margin: 0;
 }
+
+/* Blinking cursor animation for typing effect */
+.animate-blink {
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}

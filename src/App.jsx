@@ -1,5 +1,6 @@
 import Navbar from './Components/Navbar';
 import { useEffect, useState } from 'react';
+import Hero from './Components/Hero';
 
 function App() {
   const [bgVisible, setBgVisible] = useState(false);
@@ -15,6 +16,7 @@ function App() {
       className={`fixed inset-0 min-h-screen w-screen transition-colors duration-1000 ${bgVisible ? 'bg-black' : 'bg-transparent'}`}
     >
       <Navbar />
+      <Hero />
       {/* Other sections */}
     </div>
   );
