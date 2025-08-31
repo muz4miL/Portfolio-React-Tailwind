@@ -6,115 +6,125 @@ const experience = [
     bullets: [
       'Built multiple React and Tailwind CSS projects.',
       'Focused on responsive UI and clean code.',
-      'Collaborated with designers to deliver premium user experiences.',
+      'Delivered high-quality code and user experiences.',
     ],
   },
   {
-    title: 'Programming Tutor',
-    company: 'Freelance',
-    period: 'Jan 2025 - May 2025',
+    title: 'AI Sprint Extensive Internship',
+    company: 'Brave Studios',
+    period: 'Aug 2024 - Sep 2024',
     bullets: [
-      'Taught basics of programming and web development to beginners.',
-      'Created interactive lessons and coding challenges.',
+      'Attended workshops on AI and machine learning.',
+      'Participated in interactive lessons and coding challenges.',
     ],
   },
 ];
 
 const education = [
   {
-    degree: 'BSc Computer Science',
-    school: 'University of Peshawar',
+    degree: 'Bachelor of Computer Science',
+    school: 'Imsciences',
     period: '2023 - 2027',
     description:
-      'Studying core CS concepts, software engineering, and web development.',
+      'Studying core CS concepts, software engineering, DSA and web development.',
   },
   {
-    degree: 'Exchange Program',
-    school: 'US High School',
-    period: '2022 - 2023',
+    degree: 'YES Exchange Program',
+    school: 'Centralia High School',
+    period: '2019 - 2020',
     description: 'Focused on leadership, teamwork, and global perspective.',
+  },
+  {
+    degree: 'Intermediate Computer Science',
+    school: 'Edwards College Peshawar',
+    period: '2020 - 2022',
+    description:
+      'Acquired foundational understanding of Computer Science and programming principles.',
+  },
+  {
+    degree: 'Matriculation',
+    school: 'LIMS',
+    period: '2018 - 2020',
+    description:
+      'Completed Matriculation with a focus on science and mathematics.',
   },
 ];
 
 export default function Resume() {
   return (
     <section className="relative overflow-hidden bg-black px-4 py-16 text-white">
-      {/* Watermark Resume text behind header and intro */}
-      <div className="pointer-events-none absolute top-12 right-0 left-0 z-0 flex items-center justify-center select-none">
-        <h1 className="text-[12vw] leading-none font-extrabold whitespace-nowrap text-gray-800 opacity-10 md:text-[9vw] lg:text-[8vw]">
+      {/* Watermark and heading flex container */}
+      <div className="relative mb-12 flex flex-col items-center justify-center">
+        {/* Watermark background text */}
+        <span className="pointer-events-none absolute top-1/2 left-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 text-center text-6xl font-extrabold whitespace-nowrap text-white opacity-10 select-none sm:text-8xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem]">
+          RESUME
+        </span>
+        {/* Small heading above watermark */}
+        <span className="relative z-10 text-center text-3xl font-bold tracking-widest text-yellow-500 uppercase lg:mt-6">
           Resume
-        </h1>
-      </div>
-
-      {/* Main container above watermark */}
-      <div className="relative z-10 container mx-auto px-4">
-        {/* Section Title */}
-        <h2 className="text-center text-5xl font-bold text-white md:text-6xl">
-          Resume
-        </h2>
-        <div className="mx-auto mt-4 mb-8 h-1 w-24 rounded-full bg-yellow-400"></div>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-gray-300">
+        </span>
+        {/* <div className="relative z-10 mx-auto mt-4 mb-8 h-1 w-32 rounded bg-yellow-400"></div> */}
+        {/* <p className="relative z-10 mx-auto mt-4 max-w-3xl text-center text-gray-300">
           Experienced educator and content creator with strong skills in
           teaching, communication, and digital media.
           <br />
           Proficient in coding, photography, and social media management. Adept
           at simplifying complex concepts and leading collaborative projects
           with effective time management.
-        </p>
-        {/* Experience & Education Sections */}
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
-          {/* Experience Section */}
-          <div>
-            <h2 className="mb-4 text-center text-4xl font-bold text-white">
-              Experience
-            </h2>
-            <div className="mx-auto mb-12 h-1 w-24 rounded-full bg-yellow-400"></div>
-            <div className="grid grid-cols-1 gap-8">
-              {experience.map((item, idx) => (
-                <div key={idx} className="rounded-lg bg-gray-800 p-6 shadow-lg">
-                  <p className="mb-2 text-xl font-semibold text-yellow-400">
-                    {item.period}
-                  </p>
-                  <h3 className="mt-1 text-2xl font-bold text-white">
-                    {item.title}
-                  </h3>
-                  <p className="mt-1 font-semibold tracking-wide text-gray-400 uppercase">
-                    {item.company}
-                  </p>
-                  <ul className="mt-3 list-inside list-disc space-y-2 text-gray-300">
-                    {item.bullets.map((bullet, i) => (
-                      <li key={i}>{bullet}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+        </p> */}
+      </div>
+      <div className="container mx-auto px-4">
+        {/* Experience Section - styled like screenshot */}
+        <section className="mt-16">
+          <h2 className="mb-4 text-center text-5xl font-extrabold text-white">
+            Experience
+          </h2>
+          <div className="mx-auto mb-12 h-0.5 w-full max-w-6xl rounded-full bg-gradient-to-r from-gray-600 via-yellow-400 to-gray-600"></div>
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+            {experience.map((item, idx) => (
+              <div key={idx} className="rounded-xl bg-gray-800 p-8 shadow-lg">
+                <p className="mb-2 text-2xl font-extrabold tracking-tight text-yellow-400">
+                  {item.period}
+                </p>
+                <h3 className="mb-2 text-3xl font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="mb-2 text-lg font-bold tracking-widest text-gray-400 uppercase">
+                  {item.company}
+                </p>
+                <ul className="list-inside list-disc space-y-2 text-gray-300">
+                  {item.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
+        </section>
 
-          {/* Education Section */}
-          <div>
-            <h2 className="mb-4 text-center text-4xl font-bold text-white">
-              Education
-            </h2>
-            <div className="mx-auto mb-12 h-1 w-24 rounded-full bg-yellow-400"></div>
-            <div className="grid grid-cols-1 gap-8">
-              {education.map((item, idx) => (
-                <div key={idx} className="rounded-lg bg-gray-800 p-6 shadow-lg">
-                  <p className="mb-2 text-xl font-semibold text-yellow-400">
-                    {item.period}
-                  </p>
-                  <h3 className="mt-1 text-2xl font-bold text-white">
-                    {item.degree}
-                  </h3>
-                  <p className="mt-1 font-semibold tracking-wide text-gray-400 uppercase">
-                    {item.school}
-                  </p>
-                  <p className="mt-3 text-gray-300">{item.description}</p>
-                </div>
-              ))}
-            </div>
+        {/* Education Section - full width */}
+        <section className="mt-16">
+          <h2 className="mb-4 text-center text-5xl font-extrabold text-white">
+            Education
+          </h2>
+          <div className="mx-auto mb-12 h-0.5 w-full max-w-6xl rounded-full bg-gradient-to-r from-gray-600 via-yellow-400 to-gray-600"></div>
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+            {education.map((item, idx) => (
+              <div key={idx} className="rounded-xl bg-gray-800 p-8 shadow-lg">
+                <p className="mb-2 text-2xl font-extrabold tracking-tight text-yellow-400">
+                  {item.period}
+                </p>
+                <h3 className="mb-2 text-3xl font-semibold text-white">
+                  {item.degree}
+                </h3>
+                <p className="mb-2 text-lg font-bold tracking-widest text-gray-400 uppercase">
+                  {item.school}
+                </p>
+                <p className="mt-2 text-gray-300">{item.description}</p>
+              </div>
+            ))}
           </div>
-        </div>
+        </section>
 
         {/* Download CV Button */}
         <div className="mt-16 text-center">

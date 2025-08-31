@@ -14,21 +14,21 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="relative px-4 py-16 overflow-hidden text-white bg-black md:px-12 lg:px-24"
+      className="relative overflow-hidden bg-black px-4 py-16 text-white md:px-12 lg:px-24"
     >
       {/* Layered heading design */}
-      <div className="relative flex flex-col items-center justify-center mb-12">
+      <div className="relative mb-12 flex flex-col items-center justify-center">
         {/* Watermark background text */}
         <span className="pointer-events-none absolute top-1/2 left-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 text-center text-6xl font-extrabold whitespace-nowrap text-white opacity-10 select-none sm:text-8xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem]">
           ABOUT
         </span>
         {/* Small heading above watermark */}
-        <span className="relative z-10 text-lg font-bold tracking-widest text-center text-yellow-500 uppercase">
+        <span className="relative z-10 text-center text-3xl font-bold tracking-widest text-yellow-500 uppercase">
           About Me
         </span>
       </div>
       {/* Responsive grid */}
-      <div className="relative z-10 grid items-start grid-cols-1 gap-12 lg:grid-cols-2">
+      <div className="relative z-10 grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
         {/* Left: About text & details */}
         <div className="flex flex-col justify-center">
           <p className="mb-8 text-lg leading-relaxed text-gray-300">
@@ -45,7 +45,7 @@ export default function AboutMe() {
             developer while contributing value through innovative and reliable
             frontend solutions.
           </p>
-          <div className="grid grid-cols-1 text-gray-300 gap-x-8 gap-y-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-4 text-gray-300 sm:grid-cols-2">
             <p>
               <span className="font-bold text-white">Profile:</span> Frontend
               Developer (React + Tailwind)
@@ -79,11 +79,11 @@ export default function AboutMe() {
         </div>
         {/* Right: Profile card & skills */}
         <div className="flex flex-col items-center gap-8 lg:items-start">
-          <div className="flex flex-row items-center w-full gap-6">
+          <div className="flex w-full flex-row items-center gap-6">
             <img
               src={myImage}
               alt="Muzamil Shiraz"
-              className="object-cover w-32 h-32 border-4 border-yellow-500 shadow-lg rounded-xl"
+              className="h-32 w-32 rounded-xl border-4 border-yellow-500 object-cover shadow-lg"
             />
             <div className="flex flex-col gap-2">
               <p className="text-lg font-semibold">
@@ -108,7 +108,7 @@ export default function AboutMe() {
             <div className="space-y-4">
               {skills.map((skill, i) => (
                 <div key={i}>
-                  <div className="flex justify-between mb-1">
+                  <div className="mb-1 flex justify-between">
                     <span className="text-sm font-semibold tracking-wide uppercase">
                       {skill.name}
                     </span>
@@ -116,9 +116,9 @@ export default function AboutMe() {
                       {skill.level}%
                     </span>
                   </div>
-                  <div className="w-full h-2 bg-gray-800 rounded">
+                  <div className="h-2 w-full rounded bg-gray-800">
                     <div
-                      className="h-2 bg-yellow-500 rounded"
+                      className="h-2 rounded bg-yellow-500"
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
