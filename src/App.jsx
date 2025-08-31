@@ -2,6 +2,7 @@ import Navbar from './Components/Navbar';
 import { useEffect, useState } from 'react';
 import Hero from './Components/Hero';
 import AboutMe from './Components/AboutMe';
+import Resume from './Components/Resume';
 
 function App() {
   const [bgVisible, setBgVisible] = useState(false);
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Hero />
       <AboutMe />
+      <Resume />
       {/* Other sections */}
     </div>
   );
