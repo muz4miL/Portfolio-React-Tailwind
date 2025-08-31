@@ -1,9 +1,11 @@
 @import 'tailwindcss';
 
-body {
+body,
+html {
   margin: 0;
+  padding: 0;
+  background: #000; /* Ensures no white background leaks */
 }
-
 /* Blinking cursor animation for typing effect */
 .animate-blink {
   animation: blink 1s steps(2, start) infinite;
