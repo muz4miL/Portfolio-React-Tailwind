@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div
-      className={`w-full-0 min-h-screen w-screen transition-colors duration-1000 ${bgVisible ? 'bg-black' : 'bg-transparent'}`}
+      className={`min-h-screen w-full transition-colors duration-1000 ${bgVisible ? 'bg-black' : 'bg-transparent'}`}
     >
       <Navbar />
       <Hero />

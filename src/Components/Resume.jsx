@@ -56,22 +56,13 @@ export default function Resume() {
       {/* Watermark and heading flex container */}
       <div className="relative mb-12 flex flex-col items-center justify-center">
         {/* Watermark background text */}
-        <span className="pointer-events-none absolute top-1/2 left-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 text-center text-6xl font-extrabold whitespace-nowrap text-white opacity-10 select-none sm:text-8xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem]">
+        <span className="pointer-events-none absolute top-1/2 left-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden text-center text-6xl font-extrabold text-white opacity-10 select-none sm:text-8xl md:text-[6rem] lg:text-[8rem] xl:text-[10rem]">
           RESUME
         </span>
         {/* Small heading above watermark */}
         <span className="relative z-10 text-center text-3xl font-bold tracking-widest text-yellow-500 uppercase lg:mt-6">
           Resume
         </span>
-        {/* <div className="relative z-10 mx-auto mt-4 mb-8 h-1 w-32 rounded bg-yellow-400"></div> */}
-        {/* <p className="relative z-10 mx-auto mt-4 max-w-3xl text-center text-gray-300">
-          Experienced educator and content creator with strong skills in
-          teaching, communication, and digital media.
-          <br />
-          Proficient in coding, photography, and social media management. Adept
-          at simplifying complex concepts and leading collaborative projects
-          with effective time management.
-        </p> */}
       </div>
       <div className="container mx-auto px-4">
         {/* Experience Section - styled like screenshot */}

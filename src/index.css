@@ -5,7 +5,13 @@ html {
   margin: 0;
   padding: 0;
   background: #000; /* Ensures no white background leaks */
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
+
+* {
+  box-sizing: border-box;
+}
+
 /* Blinking cursor animation for typing effect */
 .animate-blink {
   animation: blink 1s steps(2, start) infinite;
@@ -18,4 +24,13 @@ html {
 
 .font-poppins {
   font-family: 'Poppins', sans-serif;
+}
+
+/* Line clamp utility for text truncation */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

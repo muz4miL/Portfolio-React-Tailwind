@@ -51,30 +51,35 @@ const Hero = () => {
           <img
             src={myImage2}
             alt="Muzamil Shiraz"
-            className="h-[600px] w-auto max-w-[400px] rounded-2xl object-contain shadow-xl lg:mr-18 lg:h-[700px] xl:h-[100vh] xl:max-w-[500px]"
+            className="h-[600px] w-auto max-w-[400px] rounded-2xl object-contain shadow-xl lg:mr-18 lg:h-[700px] xl:h-[80vh] xl:max-w-[450px]"
           />
         </div>
-        <div className="flex flex-col justify-center flex-1 px-4 text-left lg:max-w-xl xl:ml-8 xl:max-w-2xl">
-          <span className="mb-4 font-semibold tracking-widest text-yellow-400 font-poppins text-md xl:mb-6">
+        <div className="flex flex-1 flex-col justify-center px-4 text-left lg:max-w-xl xl:ml-8 xl:max-w-2xl">
+          <span className="font-poppins text-md mb-4 font-semibold tracking-widest text-yellow-400 xl:mb-6">
             HELLO!
           </span>
-          <h1 className="mb-8 text-4xl font-extrabold text-white font-poppins lg:mb-10 lg:text-7xl xl:mb-10">
+          <h1 className="font-poppins mb-8 text-4xl font-extrabold text-white lg:mb-10 lg:text-7xl xl:mb-10">
             I'm{' '}
             <span className="text-4xl text-[#ffbd39] lg:text-7xl">
               Muzamil <br />
-              <span className="block mt-4">Shiraz</span>
+              <span className="mt-4 block">Shiraz</span>
             </span>
           </h1>
           <h2 className="font-poppins mb-8 min-h-[2.5rem] text-lg font-bold text-white lg:mb-10 lg:text-3xl xl:mb-10">
             <span>{displayedText}</span>
             <span className="animate-blink">|</span>
           </h2>
-          <p className="mb-6 text-xl text-white font-poppins lg:mb-10 lg:text-4xl xl:mb-10">
+          <p className="font-poppins mb-6 text-xl text-white lg:mb-10 lg:text-4xl xl:mb-10">
             Aspiring Computer Scientist
           </p>
-          <button className="font-poppins w-[145px] rounded-full bg-[#FFBD39] px-6 py-3 text-base font-bold tracking-wide text-black hover:bg-[#FFC300] active:bg-[#FFB000]">
+          <a
+            href="#" // Replace with actual Github link
+            className="inline-block transform rounded-full bg-yellow-400 px-8 py-3 font-bold text-black uppercase shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LINKEDIN
-          </button>
+          </a>
         </div>
       </section>
 
@@ -91,27 +96,31 @@ const Hero = () => {
         <div
           className={`relative z-10 flex w-full flex-1 items-center justify-center transition-opacity duration-700 ${show ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="flex flex-col items-center justify-center w-full px-4 text-center sm:px-8">
-            <span className="mb-4 font-semibold tracking-widest text-yellow-400 font-poppins text-md">
+          <div className="flex w-full flex-col items-center justify-center px-4 text-center sm:px-8">
+            <span className="font-poppins text-md mb-4 font-semibold tracking-widest text-yellow-400">
               HELLO!
             </span>
-            <h1 className="mb-8 text-4xl font-extrabold text-white font-poppins sm:text-5xl md:text-6xl">
+            <h1 className="font-poppins mb-8 text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
               I'm{' '}
               <span className="text-4xl text-[#ffbd39] sm:text-5xl md:text-6xl">
                 Muzamil <br />
-                <span className="block mt-4">Shiraz</span>
+                <span className="mt-4 block">Shiraz</span>
               </span>
             </h1>
             <h2 className="font-poppins mb-8 min-h-[2.5rem] text-lg font-bold text-white sm:text-xl md:text-2xl">
               <span>{displayedText}</span>
               <span className="animate-blink">|</span>
             </h2>
-            <p className="mb-6 text-xl text-white font-poppins sm:text-2xl md:text-3xl">
+            <p className="font-poppins mb-6 text-xl text-white sm:text-2xl md:text-3xl">
               Aspiring Computer Scientist
             </p>
-            <button className="font-poppins w-[145px] rounded-full bg-[#FFBD39] px-6 py-3 text-base font-bold tracking-wide text-black hover:bg-[#FFC300] active:bg-[#FFB000]">
-              LINKEDIN
-            </button>
+            <a
+              href="#" // Replace with actual CV link
+              className="inline-block transform rounded-full bg-yellow-400 px-8 py-3 font-bold text-black uppercase shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"
+              download
+            >
+              Download CV
+            </a>
           </div>
         </div>
       </section>

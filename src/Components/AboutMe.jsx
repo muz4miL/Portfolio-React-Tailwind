@@ -19,7 +19,7 @@ export default function AboutMe() {
       {/* Layered heading design */}
       <div className="relative mb-12 flex flex-col items-center justify-center">
         {/* Watermark background text */}
-        <span className="pointer-events-none absolute top-1/2 left-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 text-center text-6xl font-extrabold whitespace-nowrap text-white opacity-10 select-none sm:text-8xl md:text-[8rem] lg:text-[10rem] xl:text-[12rem]">
+        <span className="pointer-events-none absolute top-1/2 left-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden text-center text-6xl font-extrabold text-white opacity-10 select-none sm:text-8xl md:text-[6rem] lg:text-[8rem] xl:text-[10rem]">
           ABOUT
         </span>
         {/* Small heading above watermark */}
