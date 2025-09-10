@@ -93,7 +93,6 @@ const Navbar = () => {
           >
             Muzamil Shiraz
           </a>
-
           {/* Hamburger button visible below xl (1280px) */}
           <div className="mr-4 flex cursor-pointer items-center md:mr-26 xl:hidden">
             <button
@@ -110,7 +109,6 @@ const Navbar = () => {
               Menu
             </span>
           </div>
-
           {/* Mobile menu overlay below xl (1280px) */}
           {isOpen && (
             <div className="font-poppins fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/90 xl:hidden">
@@ -150,7 +148,8 @@ const Navbar = () => {
                 ))}
               </ul>
             </div>
-          )}          {/* Desktop nav links only on xl and above */}
+          )}{' '}
+          {/* Desktop nav links only on xl and above */}
           <ul className="mr-4 hidden gap-x-5 space-x-8 text-lg font-normal md:mr-16 xl:mr-65 xl:flex">
             {navItems.map((item) => (
               <li

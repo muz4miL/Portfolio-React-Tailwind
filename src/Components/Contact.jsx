@@ -101,7 +101,7 @@ export default function Contact() {
 
         {/* Main heading */}
         <div className="relative z-10 mt-6 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+          <h2 className="mb-2 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
             Contact Me
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-400">

@@ -102,45 +102,48 @@ export default function Projects() {
       </div>
 
       {/* Overlapping stats and vivid background section */}
-      <div className="relative mt-26 flex flex-col items-center justify-center">
-        {/* Stats cards - overlap effect */}
-        <div className="absolute top-0 left-1/2 z-20 flex w-full max-w-6xl -translate-x-1/2 -translate-y-1/2 flex-wrap justify-center gap-8">
-          <div className="bg-opacity-95 min-w-[220px] rounded-xl bg-[#232323] px-12 py-8 text-center shadow-2xl">
-            <div className="mb-2 text-3xl font-extrabold text-yellow-400 md:text-4xl">
-              20
+      <div className="relative mt-16 flex flex-col items-center justify-center md:mt-32 lg:mt-40">
+        {/* Stats cards - responsive overlap effect */}
+        <div className="relative z-20 mb-8 w-full max-w-6xl px-4 md:absolute md:top-0 md:left-1/2 md:mb-0 md:-translate-x-1/2 md:-translate-y-1/2">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
+            <div className="bg-opacity-95 rounded-xl bg-[#232323] px-6 py-6 text-center shadow-2xl md:px-12 md:py-8">
+              <div className="mb-2 text-2xl font-extrabold text-yellow-400 md:text-3xl lg:text-4xl">
+                10+
+              </div>
+              <div className="text-sm font-semibold text-white md:text-base lg:text-lg">
+                Achievements
+              </div>
             </div>
-            <div className="text-base font-semibold text-white md:text-lg">
-              Achievements
+            <div className="bg-opacity-95 rounded-xl bg-[#232323] px-6 py-6 text-center shadow-2xl md:px-12 md:py-8">
+              <div className="mb-2 text-2xl font-extrabold text-yellow-400 md:text-3xl lg:text-4xl">
+                15+
+              </div>
+              <div className="text-sm font-semibold text-white md:text-base lg:text-lg">
+                Projects
+              </div>
             </div>
-          </div>
-          <div className="bg-opacity-95 min-w-[220px] rounded-xl bg-[#232323] px-12 py-8 text-center shadow-2xl">
-            <div className="mb-2 text-3xl font-extrabold text-yellow-400 md:text-4xl">
-              30
+            <div className="bg-opacity-95 rounded-xl bg-[#232323] px-6 py-6 text-center shadow-2xl md:px-12 md:py-8">
+              <div className="mb-2 text-2xl font-extrabold text-yellow-400 md:text-3xl lg:text-4xl">
+                250+
+              </div>
+              <div className="text-sm font-semibold text-white md:text-base lg:text-lg">
+                Mentored Students
+              </div>
             </div>
-            <div className="text-base font-semibold text-white md:text-lg">
-              Projects
-            </div>
-          </div>
-          <div className="bg-opacity-95 min-w-[220px] rounded-xl bg-[#232323] px-12 py-8 text-center shadow-2xl">
-            <div className="mb-2 text-3xl font-extrabold text-yellow-400 md:text-4xl">
-              1,000
-            </div>
-            <div className="text-base font-semibold text-white md:text-lg">
-              Mentored Students
-            </div>
-          </div>
-          <div className="bg-opacity-95 min-w-[220px] rounded-xl bg-[#232323] px-12 py-8 text-center shadow-2xl">
-            <div className="mb-2 text-3xl font-extrabold text-yellow-400 md:text-4xl">
-              500
-            </div>
-            <div className="text-base font-semibold text-white md:text-lg">
-              Cups of coffee
+            <div className="bg-opacity-95 rounded-xl bg-[#232323] px-6 py-6 text-center shadow-2xl md:px-12 md:py-8">
+              <div className="mb-2 text-2xl font-extrabold text-yellow-400 md:text-3xl lg:text-4xl">
+                500+
+              </div>
+              <div className="text-sm font-semibold text-white md:text-base lg:text-lg">
+                Cups of coffee
+              </div>
             </div>
           </div>
         </div>
+
         {/* Background image with vivid effect */}
         <div
-          className="relative m-0 flex w-full flex-col items-center justify-center pt-30 pb-16"
+          className="relative m-0 flex w-full flex-col items-center justify-center pt-20 pb-16 md:pt-32 lg:pt-36"
           style={{
             backgroundImage: `url(${bg1})`,
             backgroundSize: 'cover',
@@ -149,15 +152,15 @@ export default function Projects() {
           }}
         >
           <div className="relative z-10 flex flex-col items-center justify-center">
-            <h2 className="mb-2 text-4xl font-extrabold text-white md:text-4xl lg:text-4xl">
+            <h2 className="mb-2 text-2xl font-extrabold text-white md:text-4xl lg:text-4xl">
               More projects on <span className="text-yellow-400">Github</span>
             </h2>
-            <p className="mb-8 text-lg font-light text-gray-100 md:text-2xl md:font-normal">
+            <p className="mb-8 px-4 text-center text-base font-light text-gray-100 md:text-2xl md:font-normal">
               I love to solve business problems & uncover hidden data stories
             </p>
             <a
-              href="#" // Replace with actual Github link
-              className="inline-block transform rounded-full bg-yellow-400 px-10 py-3 text-lg font-bold tracking-wide text-black uppercase shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500 md:px-12 md:py-4 md:text-xl"
+              href="https://github.com/muz4miL" // Replace with actual Github link
+              className="inline-block transform rounded-full bg-yellow-400 px-8 py-3 text-base font-bold tracking-wide text-black uppercase shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500 md:px-12 md:py-4 md:text-xl"
               target="_blank"
               rel="noopener noreferrer"
             >
