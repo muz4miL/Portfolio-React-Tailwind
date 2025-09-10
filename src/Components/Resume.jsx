@@ -52,7 +52,10 @@ const education = [
 
 export default function Resume() {
   return (
-    <section className="relative overflow-hidden bg-black px-4 py-16 text-white">
+    <section
+      id="resume"
+      className="relative overflow-hidden bg-black px-4 py-16 text-white"
+    >
       {/* Watermark and heading flex container */}
       <div className="relative mb-12 flex flex-col items-center justify-center">
         {/* Watermark background text */}

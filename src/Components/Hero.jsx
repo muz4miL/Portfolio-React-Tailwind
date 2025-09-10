@@ -46,35 +46,41 @@ const Hero = () => {
   return (
     <>
       {/* Large screens: inline image left, text right */}
-      <section className="hidden min-h-[600px] w-full flex-row items-center justify-center bg-black md:min-h-[680px] lg:flex xl:min-h-[80vh]">
-        <div className="mr-2 ml-8 flex h-[600px] flex-shrink-0 items-center justify-center">
+      <section
+        id="hero"
+        className="hidden min-h-[600px] w-full flex-row items-center justify-center bg-black pt-20 md:min-h-[680px] lg:flex xl:min-h-[80vh]"
+      >
+        <div className="mr-4 ml-8 flex h-[600px] flex-shrink-0 items-center justify-center">
           <img
             src={myImage2}
             alt="Muzamil Shiraz"
-            className="h-[600px] w-auto max-w-[400px] rounded-2xl object-contain shadow-xl lg:mr-18 lg:h-[700px] xl:h-[80vh] xl:max-w-[450px]"
+            className="h-[600px] w-auto max-w-[400px] rounded-2xl object-contain shadow-xl lg:h-[650px] xl:h-[70vh] xl:max-w-[450px]"
           />
         </div>
-        <div className="flex flex-1 flex-col justify-center px-4 text-left lg:max-w-xl xl:ml-8 xl:max-w-2xl">
-          <span className="font-poppins text-md mb-4 font-semibold tracking-widest text-yellow-400 xl:mb-6">
+        <div className="flex flex-1 flex-col justify-center px-6 text-left lg:max-w-xl xl:ml-8 xl:max-w-2xl">
+          <span className="font-poppins mb-4 text-sm font-semibold tracking-widest text-yellow-400 uppercase xl:mb-6 xl:text-base">
             HELLO!
           </span>
-          <h1 className="font-poppins mb-8 text-4xl font-extrabold text-white lg:mb-10 lg:text-7xl xl:mb-10">
+          <h1 className="font-poppins mb-6 text-4xl font-extrabold text-white lg:mb-8 lg:text-6xl xl:mb-8 xl:text-7xl">
             I'm{' '}
-            <span className="text-4xl text-[#ffbd39] lg:text-7xl">
-              Muzamil <br />
-              <span className="mt-4 block">Shiraz</span>
+            <span className="text-4xl text-[#ffbd39] lg:text-6xl xl:text-7xl">
+              Muzamil
+            </span>
+            <br />
+            <span className="text-4xl text-[#ffbd39] lg:text-6xl xl:text-7xl">
+              Shiraz
             </span>
           </h1>
-          <h2 className="font-poppins mb-8 min-h-[2.5rem] text-lg font-bold text-white lg:mb-10 lg:text-3xl xl:mb-10">
+          <h2 className="font-poppins mb-6 min-h-[2.5rem] text-lg font-bold text-white lg:mb-8 lg:text-2xl xl:mb-8 xl:text-3xl">
             <span>{displayedText}</span>
             <span className="animate-blink">|</span>
           </h2>
-          <p className="font-poppins mb-6 text-xl text-white lg:mb-10 lg:text-4xl xl:mb-10">
+          <p className="font-poppins mb-8 text-lg text-white lg:mb-10 lg:text-xl xl:mb-10 xl:text-2xl">
             Aspiring Computer Scientist
           </p>
           <a
-            href="#" // Replace with actual Github link
-            className="inline-block transform rounded-full bg-yellow-400 px-8 py-3 font-bold text-black uppercase shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"
+            href="https://linkedin.com/in/your-profile" // Replace with actual LinkedIn URL
+            className="inline-block w-fit transform rounded-full bg-yellow-400 px-8 py-3 font-bold text-black uppercase shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500 lg:px-10 lg:py-4 lg:text-lg"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -85,41 +91,45 @@ const Hero = () => {
 
       {/* Medium and small screens: background image, centered text */}
       <section
-        className="relative flex min-h-[600px] w-full flex-col items-center justify-center bg-black bg-center bg-no-repeat md:min-h-[680px] lg:hidden"
+        className="relative flex min-h-[600px] w-full flex-col items-center justify-center bg-black bg-center bg-no-repeat pt-20 md:min-h-[680px] lg:hidden"
         style={{
           backgroundImage: `url(${myImage2})`,
           backgroundSize: 'contain',
         }}
       >
         {/* Overlay for contrast */}
-        <div className="absolute inset-0 z-0 bg-black/40" />
+        <div className="absolute inset-0 z-0 bg-black/50" />
         <div
           className={`relative z-10 flex w-full flex-1 items-center justify-center transition-opacity duration-700 ${show ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="flex w-full flex-col items-center justify-center px-4 text-center sm:px-8">
-            <span className="font-poppins text-md mb-4 font-semibold tracking-widest text-yellow-400">
+            <span className="font-poppins mb-4 text-sm font-semibold tracking-widest text-yellow-400 uppercase sm:text-base">
               HELLO!
             </span>
-            <h1 className="font-poppins mb-8 text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+            <h1 className="font-poppins mb-6 text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
               I'm{' '}
               <span className="text-4xl text-[#ffbd39] sm:text-5xl md:text-6xl">
-                Muzamil <br />
-                <span className="mt-4 block">Shiraz</span>
+                Muzamil
+              </span>
+              <br />
+              <span className="text-4xl text-[#ffbd39] sm:text-5xl md:text-6xl">
+                Shiraz
               </span>
             </h1>
-            <h2 className="font-poppins mb-8 min-h-[2.5rem] text-lg font-bold text-white sm:text-xl md:text-2xl">
+            <h2 className="font-poppins mb-6 min-h-[2.5rem] text-lg font-bold text-white sm:text-xl md:text-2xl">
               <span>{displayedText}</span>
               <span className="animate-blink">|</span>
             </h2>
-            <p className="font-poppins mb-6 text-xl text-white sm:text-2xl md:text-3xl">
+            <p className="font-poppins mb-8 text-lg text-white sm:text-xl md:text-2xl">
               Aspiring Computer Scientist
             </p>
             <a
-              href="#" // Replace with actual CV link
-              className="inline-block transform rounded-full bg-yellow-400 px-8 py-3 font-bold text-black uppercase shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500"
-              download
+              href="https://linkedin.com/in/your-profile" // Replace with actual LinkedIn URL
+              className="inline-block transform rounded-full bg-yellow-400 px-8 py-3 font-bold text-black uppercase shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-yellow-500 sm:px-10 sm:py-4 sm:text-lg"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Download CV
+              LINKEDIN
             </a>
           </div>
         </div>

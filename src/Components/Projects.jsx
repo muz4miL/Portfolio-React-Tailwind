@@ -35,16 +35,19 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="relative overflow-x-hidden bg-black px-4 py-16 text-white">
+    <section
+      id="projects"
+      className="relative overflow-x-hidden bg-black px-4 py-16 text-white"
+    >
       {/* Header Section */}
       <div className="relative mb-16 flex flex-col items-center justify-center">
         {/* Watermark background text */}
-        <span className="pointer-events-none absolute top-1/2 left-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden text-center text-6xl font-extrabold text-white opacity-5 select-none sm:text-8xl md:text-[6rem] lg:text-[8rem] xl:text-[10rem]">
+        <span className="pointer-events-none absolute top-1/2 left-1/2 z-0 w-full -translate-x-1/2 -translate-y-1/2 overflow-hidden text-center text-6xl font-extrabold text-white opacity-10 select-none sm:text-8xl md:text-[6rem] lg:text-[8rem] xl:text-[10rem]">
           PROJECTS
         </span>
 
-        {/* Main heading */}
-        <div className="relative z-10 text-center">
+        {/* Main heading - FIXED POSITIONING */}
+        <div className="relative z-10 translate-y-2 text-center">
           <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
             Projects
           </h2>
@@ -99,7 +102,7 @@ export default function Projects() {
       </div>
 
       {/* Overlapping stats and vivid background section */}
-      <div className="relative mt-24 flex flex-col items-center justify-center">
+      <div className="relative mt-26 flex flex-col items-center justify-center">
         {/* Stats cards - overlap effect */}
         <div className="absolute top-0 left-1/2 z-20 flex w-full max-w-6xl -translate-x-1/2 -translate-y-1/2 flex-wrap justify-center gap-8">
           <div className="bg-opacity-95 min-w-[220px] rounded-xl bg-[#232323] px-12 py-8 text-center shadow-2xl">
@@ -137,7 +140,7 @@ export default function Projects() {
         </div>
         {/* Background image with vivid effect */}
         <div
-          className="relative m-0 flex w-full flex-col items-center justify-center pt-32 pb-16"
+          className="relative m-0 flex w-full flex-col items-center justify-center pt-30 pb-16"
           style={{
             backgroundImage: `url(${bg1})`,
             backgroundSize: 'cover',
