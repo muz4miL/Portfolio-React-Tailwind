@@ -32,8 +32,8 @@ const contactItems = [
         <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
       </svg>
     ),
-    title: 'DOWNLOAD RESUME',
-    value: 'resumelink',
+    title: 'VIEW RESUME',
+    value: 'Open Resume',
     isLink: true,
   },
 ];
@@ -131,7 +131,7 @@ export default function Contact() {
               {/* Value */}
               {item.isLink ? (
                 <a
-                  href="#" // Replace with actual resume link
+                  href="/resume.pdf" // Replace with actual resume link
                   className="font-medium text-white transition-colors duration-300 hover:text-yellow-400"
                   target="_blank"
                   rel="noopener noreferrer"
