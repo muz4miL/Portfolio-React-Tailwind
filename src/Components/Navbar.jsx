@@ -27,6 +27,9 @@ const Navbar = () => {
 
   // Active section detection using Intersection Observer
   useEffect(() => {
+    // Don't run intersection observer when mobile menu is open
+    if (isOpen) return;
+
     const observerOptions = {
       root: null,
       rootMargin: '-80px 0px -50% 0px', // Account for navbar height and center detection
@@ -57,10 +60,33 @@ const Navbar = () => {
     return () => {
       observer.disconnect();
     };
-  }, []); // Empty dependency array since navItems is static
+  }, [isOpen]); // Re-run when menu opens/closes
 
   function toggleMenu() {
+    if (!isOpen) {
+      // When opening menu, detect current section
+      const currentSection = getCurrentSection();
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    }
     setIsOpen((prev) => !prev);
+  }
+
+  // Helper function to detect current section
+  function getCurrentSection() {
+    const sections = navItems
+      .map((item) => document.getElementById(item.id))
+      .filter(Boolean);
+    const scrollPosition = window.scrollY + 100; // Account for navbar
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const section = sections[i];
+      if (section.offsetTop <= scrollPosition) {
+        return section.id;
+      }
+    }
+    return 'hero'; // Default to hero if no section found
   }
 
   function closeMenu() {
@@ -111,7 +137,18 @@ const Navbar = () => {
           </div>
           {/* Mobile menu overlay below xl (1280px) */}
           {isOpen && (
-            <div className="font-poppins fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/90 xl:hidden">
+            <div
+              className="font-poppins fixed inset-0 z-50 xl:hidden"
+              style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.80)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100vw',
+                height: '100vh',
+              }}
+            >
               <button
                 aria-label="Close menu"
                 onClick={closeMenu}
@@ -132,23 +169,23 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
-              <ul className="flex w-full flex-col items-center justify-center gap-8">
-                {navItems.map((item) => (
-                  <li
-                    key={item.name}
-                    className={`cursor-pointer text-2xl font-semibold transition-colors ${
-                      activeSection === item.id
-                        ? 'text-yellow-400'
-                        : 'text-gray-200 hover:text-yellow-400'
-                    }`}
-                    onClick={() => scrollToSection(item.id)}
-                  >
-                    {item.name}
-                  </li>
-                ))}
-              </ul>
+
+              {navItems.map((item) => (
+                <div
+                  key={item.name}
+                  className={`cursor-pointer text-3xl font-semibold transition-colors ${
+                    activeSection === item.id
+                      ? 'text-yellow-400'
+                      : 'text-gray-200 hover:text-yellow-400'
+                  }`}
+                  style={{ marginBottom: '32px' }}
+                  onClick={() => scrollToSection(item.id)}
+                >
+                  {item.name}
+                </div>
+              ))}
             </div>
-          )}{' '}
+          )}
           {/* Desktop nav links only on xl and above */}
           <ul className="mr-4 hidden gap-x-5 space-x-8 text-lg font-normal md:mr-16 xl:mr-65 xl:flex">
             {navItems.map((item) => (

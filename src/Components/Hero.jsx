@@ -54,7 +54,7 @@ const Hero = () => {
           <img
             src={myImage2}
             alt="Muzamil Shiraz"
-            className="h-[600px] w-auto max-w-[400px] rounded-2xl object-contain shadow-xl lg:h-[650px] xl:h-[70vh] xl:max-w-[450px]"
+            className="h-[600px] w-auto max-w-[400px] object-contain shadow-xl lg:h-[650px] xl:h-[70vh] xl:max-w-[450px]"
           />
         </div>
         <div className="flex flex-1 flex-col justify-center px-6 text-left lg:max-w-xl xl:ml-8 xl:max-w-2xl">
